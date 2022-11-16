@@ -43,10 +43,17 @@ function populateList(list){
     for (let i = 0; i <list.length; i++){
         let listItems = document.createElement("li");
         listItems.textContent = list[i];
-        // unorderedList.appendChild(listItems);
+        unorderedList.appendChild(listItems);
         console.log(listItems);
     }
 }
 
 const shoppingList = ["cheese","bread","green pepper"];
 populateList(shoppingList);
+
+function changeListStyle(newlist){
+    unorderedList.classList.remove("circleList");
+    unorderedList.classList.add("squareList");
+}
+
+changeListStyle(shoppingList);
