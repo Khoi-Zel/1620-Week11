@@ -57,3 +57,15 @@ function changeListStyle(newlist){
 }
 
 changeListStyle(shoppingList);
+
+const listItems = document.querySelectorAll(".shopping li")
+
+function findGreen(newestList){
+    for (let i = 0; i < listItems.length; i++){
+        if(listItems[i].textContent.includes("green")){
+            listItems[i].classList.add("green");
+        }
+    }
+}
+
+findGreen(shoppingList);
